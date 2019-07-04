@@ -2,6 +2,11 @@
 
 A simple component library built on top of React, Emotion, and Styled-System.
 
+### TODO
+
+- [ ] Publish to NPM
+- [ ] Add TextInput component
+
 ### Available Components
 
 All components extend from the base Box component, which accepts all the props
