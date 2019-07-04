@@ -4,8 +4,9 @@ A simple component library built on top of React, Emotion, and Styled-System.
 
 ### TODO
 
-- [ ] Publish to NPM
+- [x] Publish to NPM
 - [x] Add TextInput component
+- [ ] Global Styles
 
 ### Available Components
 

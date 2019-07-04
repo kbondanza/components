@@ -1,7 +1,10 @@
 {
   "name": "@matthamlin/components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "repository": "git@github.com:hamlim/components.git",
   "author": "Matthew Hamlin <hamlim@outlook.com> (https://matthamlin.me/)",
   "license": "MIT",
@@ -22,6 +25,7 @@
   "peerDependencies": {
     "@emotion/core": "10.0.14",
     "@emotion/styled": "10.0.14",
+    "emotion-theming": "10.0.14",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
