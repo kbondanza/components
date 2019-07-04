@@ -2,10 +2,10 @@ import React, { createContext, useContext } from 'react'
 import defaultTheme from './Theme.js'
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming'
 
-let themeContext = createContext(theme)
+let themeContext = createContext(defaultTheme)
 
 export function useTheme() {
-  return useContext(theme)
+  return useContext(themeContext)
 }
 
 export function ThemeProvider({ children, theme = defaultTheme }) {

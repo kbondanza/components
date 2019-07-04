@@ -27,7 +27,7 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
-    "build": "babel src/ --out-dir dist/ --ignore=*-test.js"
+    "build": "babel src/ --out-dir dist/ --ignore src/__tests__/"
   },
   "dependencies": {
     "@styled-system/should-forward-prop": "5.0.12",
