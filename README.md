@@ -62,6 +62,17 @@ its own state for the value and accepts a `defaultValue` and an `onChange`.
 <ControlledInput defaultValue="foo" onChange={setValue} />
 ```
 
+#### `Banner`
+
+The Banner component supports 4 variants:
+
+```jsx
+<Banner variant="info">Info</Banner>
+<Banner variant="success">Success</Banner>
+<Banner variant="warning">Warning</Banner>
+<Banner variant="error">Error</Banner>
+```
+
 #### `GlobalStyles`
 
 The GlobalStyles component simply adds a basic css reset to the page to ensure

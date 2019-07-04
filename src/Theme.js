@@ -19,7 +19,7 @@ let fontSizes = [
   baseFontSize * (fontScale * 3),
 ]
 
-let colors = {
+let baseColors = {
   base: '#07c',
   black: '#374047',
   gray: [
@@ -180,6 +180,20 @@ let colors = {
   ],
 }
 
+let colors = {
+  ...baseColors,
+  white: '#fdfefe',
+  primary: baseColors.teal[4],
+  primaryLight: baseColors.teal[2],
+  primaryDark: baseColors.teal[6],
+  secondary: baseColors.blue[4],
+  secondaryLight: baseColors.blue[2],
+  secondaryDark: baseColors.blue[6],
+  tertiary: baseColors.orange[4],
+  tertiaryLight: baseColors.orange[2],
+  tertiaryDark: baseColors.orange[6],
+}
+
 export default {
   space: [0, 2, 4, 6, 8, 10, 20, 40, 60, 80, 100],
   fontSizes,
@@ -203,17 +217,47 @@ export default {
     large: `@media screen and (min-width: ${breakpoints[2]})`,
     xLarge: `@media screen and (min-width: ${breakpoints[3]})`,
   },
-  colors: {
-    ...colors,
-    white: '#fdfefe',
-    primary: colors.teal[4],
-    primaryLight: colors.teal[2],
-    primaryDark: colors.teal[6],
-    secondary: colors.blue[4],
-    secondaryLight: colors.blue[2],
-    secondaryDark: colors.blue[6],
-    tertiary: colors.orange[4],
-    tertiaryLight: colors.orange[2],
-    tertiaryDark: colors.orange[6],
+  colors,
+  banners: {
+    success: {
+      color: colors.black,
+      backgroundColor: colors.primaryLight,
+      border: `solid 2px ${colors.primaryDark}`,
+      borderRadius: '4px',
+      padding: '10px',
+      minHeight: '50px',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    info: {
+      color: colors.black,
+      backgroundColor: colors.secondaryLight,
+      border: `solid 2px ${colors.secondaryDark}`,
+      borderRadius: '4px',
+      padding: '10px',
+      minHeight: '50px',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    error: {
+      color: colors.black,
+      backgroundColor: colors.red[2],
+      border: `solid 2px ${colors.red[6]}`,
+      borderRadius: '4px',
+      padding: '10px',
+      minHeight: '50px',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    warning: {
+      color: colors.black,
+      backgroundColor: colors.orange[2],
+      border: `solid 2px ${colors.orange[6]}`,
+      borderRadius: '4px',
+      padding: '10px',
+      minHeight: '50px',
+      display: 'flex',
+      alignItems: 'center',
+    },
   },
 }

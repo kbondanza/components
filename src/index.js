@@ -5,5 +5,6 @@ export * from './Button.js'
 export * from './ThemeProvider.js'
 export * from './Input.js'
 export * from './GlobalStyles.js'
+export * from './Banner.js'
 
 export { default as Theme } from './Theme.js'
