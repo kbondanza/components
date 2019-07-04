@@ -5,7 +5,7 @@ A simple component library built on top of React, Emotion, and Styled-System.
 ### TODO
 
 - [ ] Publish to NPM
-- [ ] Add TextInput component
+- [x] Add TextInput component
 
 ### Available Components
 
