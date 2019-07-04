@@ -3,7 +3,13 @@ import { useState, useCallback } from 'react'
 import { jsx, css } from '@emotion/core'
 import { Box } from './Box'
 
-export function Input({ unstable_Focused = false, ...props }) {
+export function Input({ unstable_Focused = false, onChange, ...props }) {
+  let handleChange = useCallback(
+    function handleChange(event) {
+      onChange(event.target.value)
+    },
+    [onChange],
+  )
   return (
     <Box
       as="input"
@@ -30,6 +36,7 @@ export function Input({ unstable_Focused = false, ...props }) {
             : {}),
         })
       }
+      onChange={handleChange}
       {...props}
     />
   )
@@ -43,9 +50,12 @@ export function ControlledInput({
   ...props
 }) {
   let [value, setValue] = useState(defaultValue)
-  let handleChange = useCallback(function handleChange(event) {
-    setValue(event.target.value)
-    onChange(event.target.value)
-  }, [])
+  let handleChange = useCallback(
+    function handleChange(value) {
+      setValue(value)
+      onChange(value)
+    },
+    [onChange],
+  )
   return <Input {...props} value={value} onChange={handleChange} />
 }

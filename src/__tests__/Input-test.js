@@ -1,9 +1,12 @@
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, cleanup } from '@testing-library/react'
 import React from 'react'
 import { Input, ControlledInput } from '../Input.js'
 import { ThemeProvider } from '../ThemeProvider.js'
+import 'jest-dom/extend-expect'
 
-test('Input calls onChange with the event', () => {
+afterEach(cleanup)
+
+test('Input calls onChange with the value only', () => {
   let handleChange = jest.fn()
   let { container } = render(
     <ThemeProvider>
@@ -13,9 +16,9 @@ test('Input calls onChange with the event', () => {
 
   let input = container.querySelector('input')
 
-  fireEvent.change(input, { target: { value: 'a' } })
+  fireEvent.change(input, { target: { value: 'value' } })
 
-  expect(handleChange).toHaveBeenCalled()
+  expect(handleChange).toHaveBeenCalledWith('value')
 })
 
 test('ControlledInput calls onChange', () => {
@@ -28,7 +31,7 @@ test('ControlledInput calls onChange', () => {
 
   let input = container.querySelector('input')
 
-  fireEvent.change(input, { target: { value: 'a' } })
+  fireEvent.change(input, { target: { value: 'value' } })
 
-  expect(handleChange).toHaveBeenCalled()
+  expect(handleChange).toHaveBeenCalledWith('value')
 })

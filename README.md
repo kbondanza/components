@@ -49,6 +49,18 @@ opinionated styles.
 <Button onClick={doSomething}>Click Here</Button>
 ```
 
+#### `Input` and `ControlledInput`
+
+The Input component is a wrapper around the `input` html element. The
+`ControlledInput` component is a wrapper around the Input primitive that stores
+its own state for the value and accepts a `defaultValue` and an `onChange`.
+
+```jsx
+<Input onChange={handleChange} value={value} />
+
+<ControlledInput defaultValue="foo" onChange={setValue} />
+```
+
 #### `ThemeProvider` and `useTheme`
 
 In order for the styles for the elements to work properly, the root of your app
