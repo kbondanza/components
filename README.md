@@ -6,7 +6,7 @@ A simple component library built on top of React, Emotion, and Styled-System.
 
 - [x] Publish to NPM
 - [x] Add TextInput component
-- [ ] Global Styles
+- [x] Global Styles
 
 ### Available Components
 
@@ -60,6 +60,15 @@ its own state for the value and accepts a `defaultValue` and an `onChange`.
 <Input onChange={handleChange} value={value} />
 
 <ControlledInput defaultValue="foo" onChange={setValue} />
+```
+
+#### `GlobalStyles`
+
+The GlobalStyles component simply adds a basic css reset to the page to ensure
+style consistency.
+
+```jsx
+<GlobalStyles />
 ```
 
 #### `ThemeProvider` and `useTheme`
