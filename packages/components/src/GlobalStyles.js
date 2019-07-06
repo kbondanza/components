@@ -8,6 +8,7 @@ export function GlobalStyles() {
         html {
           box-sizing: border-box;
           font-size: ${theme.fontSizes[1]}px;
+          font-family: ${theme.fonts.base};
         }
         *,
         *::before,

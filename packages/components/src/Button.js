@@ -11,8 +11,8 @@ export function Button({
     <Box
       as="button"
       fontSize={1}
-      pv={4}
-      ph={8}
+      py={4}
+      px={8}
       borderRadius={0}
       width={isFullWidth ? '100%' : null}
       css={theme =>

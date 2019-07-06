@@ -198,7 +198,7 @@ export default {
   space: [0, 2, 4, 6, 8, 10, 20, 40, 60, 80, 100],
   fontSizes,
   fonts: {
-    base: 'sans-serif',
+    base: 'system-ui, sans-serif',
     serif: '"Times New Roman", serif',
   },
   fontWeights: {

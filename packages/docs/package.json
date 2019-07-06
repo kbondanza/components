@@ -1,0 +1,26 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "Matthew Hamlin <hamlim@outlook.com> (https://matthamlin.me/)",
+  "license": "MIT",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "now-build": "gatsby build"
+  },
+  "dependencies": {
+    "@emotion/core": "10.0.14",
+    "@emotion/styled": "10.0.14",
+    "@mdx-js/mdx": "1.0.21",
+    "@mdx-js/react": "1.0.21",
+    "gatsby": "2.13.4",
+    "gatsby-plugin-mdx": "1.0.7",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "@matthamlin/components": "*"
+  }
+}
