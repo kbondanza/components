@@ -89,10 +89,16 @@ its own state for the value and accepts a `defaultValue` and an `onChange`.
 <ControlledInput defaultValue="foo" onChange={setValue} />
 ```
 
-<Box>
-  <Input onChange={value => console.log(value)} value="value" />
-  <ControlledInput defaultValue="foo" onChange={value => console.log(value)} />
+<Box my={8}>
+  <Input my={6} onChange={value => console.log(value)} value="value" />
+  <ControlledInput
+    my={6}
+    defaultValue="foo"
+    onChange={value => console.log(value)}
+  />
 </Box>
+
+<Box my={8} />
 
 #### `Banner`
 
@@ -105,11 +111,36 @@ The Banner component supports 4 variants:
 <Banner variant="error">Error</Banner>
 ```
 
+<Box my={8}>
+  <Banner my={2} variant="info">
+    Info
+  </Banner>
+  <Banner my={2} variant="success">
+    Success
+  </Banner>
+  <Banner my={2} variant="warning">
+    Warning
+  </Banner>
+  <Banner my={2} variant="error">
+    Error
+  </Banner>
+</Box>
+
+#### `Link`
+
+The Link component renders as a text link, it requires an `as` prop to render as
+an appropriate element (e.g. Link, 'a', etc).
+
+```jsx
+<Link as="a" href="#">
+  Link
+</Link>
+```
+
 <Box>
-  <Banner variant="info">Info</Banner>
-  <Banner variant="success">Success</Banner>
-  <Banner variant="warning">Warning</Banner>
-  <Banner variant="error">Error</Banner>
+  <Link as="a" href="#">
+    Link
+  </Link>
 </Box>
 
 #### `GlobalStyles`

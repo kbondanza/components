@@ -73,6 +73,17 @@ The Banner component supports 4 variants:
 <Banner variant="error">Error</Banner>
 ```
 
+#### `Link`
+
+The Link component renders as a text link, it requires an `as` prop to render as
+an appropriate element (e.g. Link, 'a', etc).
+
+```jsx
+<Link as="a" href="#">
+  Link
+</Link>
+```
+
 #### `GlobalStyles`
 
 The GlobalStyles component simply adds a basic css reset to the page to ensure
