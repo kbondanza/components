@@ -4,6 +4,8 @@ import { MDXProvider } from '@mdx-js/react'
 
 import * as Components from '@matthamlin/components'
 
+let { useMedia } = Components
+
 function Code(props) {
   return (
     <pre
@@ -48,6 +50,8 @@ function Paragraph(props) {
 }
 
 export default function Layout({ children }) {
+  let matches = useMedia({ query: '(min-width: 1000px)' })
+  console.log({ matches })
   return (
     <MDXProvider
       components={{
