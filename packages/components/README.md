@@ -84,6 +84,16 @@ an appropriate element (e.g. Link, 'a', etc).
 </Link>
 ```
 
+#### `useMedia`
+
+```jsx
+let matches = useMedia({
+  query: '(min-width: 1000px)',
+  defaultMatches: false,
+  matchMedia: query => ({ matches, addListener, removeListener }),
+})
+```
+
 #### `GlobalStyles`
 
 The GlobalStyles component simply adds a basic css reset to the page to ensure
