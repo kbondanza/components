@@ -8,5 +8,6 @@ export * from './GlobalStyles.js'
 export * from './Banner.js'
 export * from './Link.js'
 export * from './UseMedia.js'
+export * from './Tapable.js'
 
 export { default as Theme } from './Theme.js'

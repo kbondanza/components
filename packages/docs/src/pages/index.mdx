@@ -64,6 +64,23 @@ fontSizes within the theme.
   <H6>Page Title</H6>
 </Box>
 
+#### `Tapable`
+
+The Tapable component is an interactive element with an `onTap` callback. Think
+of it like a button element with more styling flexibility.
+
+```jsx
+<Tapable onTap={doSomething} disabled={false}>
+  Click Here
+</Tapable>
+```
+
+<Box>
+  <Tapable onTap={() => console.log('Yo')} disabled={false}>
+    Click Here
+  </Tapable>
+</Box>
+
 #### `Button`
 
 The Button component is a wrapper around an html `button` element, with a few
@@ -75,6 +92,9 @@ opinionated styles.
 
 <Box>
   <Button onClick={() => console.log('Yo')}>Click Here</Button>
+</Box>
+<Box>
+  <Button onClick={() => console.log('Yo')} isFullWidth>Click Here</Button>
 </Box>
 
 #### `Input` and `ControlledInput`
