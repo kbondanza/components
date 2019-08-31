@@ -13,7 +13,9 @@ export function Button({
     <Tapable
       onTap={onClick}
       disabled={disabled}
-      as="button"
+      display={isFullWidth ? 'flex' : 'inline-flex'}
+      justifyContent="center"
+      alignItems="center"
       fontSize={1}
       py={4}
       px={8}

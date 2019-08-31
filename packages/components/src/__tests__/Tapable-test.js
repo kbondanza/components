@@ -102,3 +102,37 @@ test("it doesn't call onTap when the user hits enter when focused and disabled",
 
   expect(handleTap).not.toHaveBeenCalled()
 })
+
+test('it prevents default when the user hits spacebar when focused', () => {
+  let defaultPrevented = false
+  let handleTap = jest.fn(event => {
+    defaultPrevented = event.defaultPrevented
+  })
+  let { container, getByText } = render(
+    <ThemeProvider>
+      <Tapable onTap={handleTap}>button</Tapable>
+    </ThemeProvider>,
+  )
+
+  fireEvent.keyDown(getByText('button'), { key: ' ' })
+
+  expect(handleTap).toHaveBeenCalled()
+  expect(defaultPrevented).toBe(true)
+})
+
+test("it doesn't prevent default when the user hits Enter when focused", () => {
+  let defaultPrevented = false
+  let handleTap = jest.fn(event => {
+    defaultPrevented = event.defaultPrevented
+  })
+  let { container, getByText } = render(
+    <ThemeProvider>
+      <Tapable onTap={handleTap}>button</Tapable>
+    </ThemeProvider>,
+  )
+
+  fireEvent.keyDown(getByText('button'), { key: 'Enter' })
+
+  expect(handleTap).toHaveBeenCalled()
+  expect(defaultPrevented).toBe(false)
+})
