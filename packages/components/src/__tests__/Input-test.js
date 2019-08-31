@@ -2,7 +2,7 @@ import { render, fireEvent, cleanup } from '@testing-library/react'
 import React from 'react'
 import { Input, ControlledInput } from '../Input.js'
 import { ThemeProvider } from '../ThemeProvider.js'
-import 'jest-dom/extend-expect'
+import '@testing-library/jest-dom/extend-expect'
 
 afterEach(cleanup)
 

@@ -2,12 +2,6 @@
 
 A simple component library built on top of React, Emotion, and Styled-System.
 
-### TODO
-
-- [x] Publish to NPM
-- [x] Add TextInput component
-- [x] Global Styles
-
 ### Available Components
 
 All components extend from the base Box component, which accepts all the props
@@ -39,6 +33,17 @@ fontSizes within the theme.
 
 ```jsx
 <H1>Page Title</H1>
+```
+
+#### `Tapable`
+
+The Tapable component is an interactive element with an `onTap` callback. Think
+of it like a button element with more styling flexibility.
+
+```jsx
+<Tapable onTap={doSomething} disabled={false}>
+  Click Here
+</Tapable>
 ```
 
 #### `Button`

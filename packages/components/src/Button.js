@@ -1,14 +1,18 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { Box } from './Box.js'
+import { Tapable } from './Tapable.js'
 
 export function Button({
   unstable_Focused = false,
   isFullWidth = false,
+  onClick,
+  disabled,
   ...props
 }) {
   return (
-    <Box
+    <Tapable
+      onTap={onClick}
+      disabled={disabled}
       as="button"
       fontSize={1}
       py={4}
