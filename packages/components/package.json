@@ -8,6 +8,10 @@
   "repository": "git@github.com:hamlim/components.git",
   "author": "Matthew Hamlin <hamlim@outlook.com> (https://matthamlin.me/)",
   "license": "MIT",
+  "dependencies": {
+    "@styled-system/should-forward-prop": "5.0.12",
+    "styled-system": "5.0.12"
+  },
   "devDependencies": {
     "@babel/cli": "7.5.0",
     "@babel/core": "7.5.0",
@@ -18,25 +22,21 @@
     "@testing-library/react": "8.0.4",
     "emotion-theming": "10.0.14",
     "jest": "24.8.0",
-    "jest-dom": "3.5.0",
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "@testing-library/jest-dom": "4.1.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
   },
   "peerDependencies": {
     "@emotion/core": "10.0.14",
     "@emotion/styled": "10.0.14",
     "emotion-theming": "10.0.14",
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
   },
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
     "build": "babel src/ --out-dir dist/ --ignore src/__tests__/",
     "pub": "yarn publish --access public"
-  },
-  "dependencies": {
-    "@styled-system/should-forward-prop": "5.0.12",
-    "styled-system": "5.0.12"
   }
 }
