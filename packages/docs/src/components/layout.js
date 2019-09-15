@@ -14,7 +14,7 @@ function Code(props) {
         color: ${theme.colors.primary};
         padding: ${theme.space[4]}px;
         margin-bottom: ${theme.space[4]}px;
-        width: max-content;
+        width: fit-content;
       `}
     >
       <code {...props} />
