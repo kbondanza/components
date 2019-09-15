@@ -1,20 +1,29 @@
-<Box bg="primary" p={8}>
-  <H1 textAlign="center" color="white">
-    @matthamlin/components
-  </H1>
+<Box pt="48px" px={8} pb="64px"
+style={{backgroundImage: 'repeating-radial-gradient(ellipse at 10% -80%, #012e6f, #012e6f 20px, #012a66 20px, #012a66 50px)'}}>
+
+# @matthamlin/components
+
 </Box>
 
-<Box pt={8} />
+<Box maxWidth="60em" mx={'auto'}>
 
-The `@matthamlin/components` package contains a few opinionated styled
-components built using React, Emotion, and Styled-System.
+<Box textAlign="center" maxWidth="600px" my={8} mx={'auto'}>
 
-### Available Components
+The [@matthamlin/components](https://github.com/hamlim/components) package
+contains a few opinionated styled components built using React, Emotion, and
+Styled-System.
+
+</Box>
+
+[![github](https://flat.badgen.net/badge/icon/github/black?icon=github&label)](https://github.com/hamlim/components)
+[![npm](https://flat.badgen.net/npm/v/@matthamlin/components)](https://www.npmjs.com/package/@matthamlin/components)
+
+## Available Components
 
 All components extend from the base Box component, which accepts all the props
 supported through styled-system, and spreads the rest onto the html element.
 
-#### `Box`
+### Box
 
 Box accepts all the props supported through `styled-system`.
 
@@ -24,11 +33,9 @@ Box accepts all the props supported through `styled-system`.
 </Box>
 ```
 
-<Box color="primary" m={[2, 4]}>
-  Content
-</Box>
+<Box color="primary" m={[2, 4]}> Content </Box>
 
-#### `Text`
+### Text
 
 Text is a wrapper on top Box, that defaults to rendering as a `p` element
 
@@ -40,7 +47,7 @@ Text is a wrapper on top Box, that defaults to rendering as a `p` element
   <Text>Some content here</Text>
 </Box>
 
-#### `H1, H2, H3, H4, H5, H6`
+### H1, H2, H3, H4, H5, H6
 
 The Heading components are composed of Box components, defaulting to rendering
 the relative html heading element, and defaulting the fontSize to the scale of
@@ -64,7 +71,7 @@ fontSizes within the theme.
   <H6>Page Title</H6>
 </Box>
 
-#### `Tapable`
+### Tapable
 
 The Tapable component is an interactive element with an `onTap` callback. Think
 of it like a button element with more styling flexibility.
@@ -81,7 +88,7 @@ of it like a button element with more styling flexibility.
   </Tapable>
 </Box>
 
-#### `Button`
+### Button
 
 The Button component is a wrapper around an html `button` element, with a few
 opinionated styles.
@@ -93,11 +100,11 @@ opinionated styles.
 <Box>
   <Button onClick={() => console.log('Yo')}>Click Here</Button>
 </Box>
-<Box>
+<Box mt={4}>
   <Button onClick={() => console.log('Yo')} isFullWidth>Click Here</Button>
 </Box>
 
-#### `Input` and `ControlledInput`
+### Input and ControlledInput
 
 The Input component is a wrapper around the `input` html element. The
 `ControlledInput` component is a wrapper around the Input primitive that stores
@@ -120,7 +127,7 @@ its own state for the value and accepts a `defaultValue` and an `onChange`.
 
 <Box my={8} />
 
-#### `Banner`
+### Banner
 
 The Banner component supports 4 variants:
 
@@ -146,7 +153,7 @@ The Banner component supports 4 variants:
   </Banner>
 </Box>
 
-#### `Link`
+### Link
 
 The Link component renders as a text link, it requires an `as` prop to render as
 an appropriate element (e.g. Link, 'a', etc).
@@ -163,7 +170,7 @@ an appropriate element (e.g. Link, 'a', etc).
   </Link>
 </Box>
 
-#### `GlobalStyles`
+### GlobalStyles
 
 The GlobalStyles component simply adds a basic css reset to the page to ensure
 style consistency.
@@ -172,7 +179,7 @@ style consistency.
 <GlobalStyles />
 ```
 
-#### `ThemeProvider` and `useTheme`
+### ThemeProvider and useTheme
 
 In order for the styles for the elements to work properly, the root of your app
 should render a `ThemeProvider` component which accepts children and optionally
@@ -181,10 +188,12 @@ a `theme` override prop to override the default theme.
 Additionally, you can use `useTheme` to read the theme within a function
 component.
 
-#### `Theme`
+### Theme
 
 The components library also exposes the Theme object, allowing you to extend the
 system.
 
 This theme object follows the theme spec from styled-system, see
 [here](https://styled-system.com/theme-specification) for more information.
+
+</Box>

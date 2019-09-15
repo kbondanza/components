@@ -14,6 +14,7 @@ function Code(props) {
         color: ${theme.colors.primary};
         padding: ${theme.space[4]}px;
         margin-bottom: ${theme.space[4]}px;
+        width: max-content;
       `}
     >
       <code {...props} />
@@ -27,11 +28,72 @@ function InlineCode(props) {
       {...props}
       css={theme => css`
         display: inline-block;
-        background-color: ${theme.colors.gray[4]};
+        background-color: ${theme.colors.gray[1]};
         color: ${theme.colors.secondaryDark};
         padding: ${theme.space[2]}px;
         border-radius: ${theme.radii[0]};
       `}
+    />
+  )
+}
+
+function Link(props) {
+  return (
+    <Components.Link
+      {...props}
+      as="a"
+      css={theme =>
+        css`
+          color: ${theme.colors.blue[7]};
+        `
+      }
+    />
+  )
+}
+
+function PageTitle(props) {
+  return (
+    <Components.H1
+      {...props}
+      css={theme =>
+        css`
+          color: ${theme.colors.white};
+          text-align: center;
+          background-image: linear-gradient(
+            transparent 82%,
+            ${theme.colors.primary} 0
+          );
+          width: fit-content;
+          margin: 0 auto;
+        `
+      }
+    />
+  )
+}
+
+function SectionTitle(props) {
+  return (
+    <Components.H2
+      {...props}
+      css={theme =>
+        css`
+          margin: ${theme.space[7]}px 0;
+        `
+      }
+    />
+  )
+}
+
+function ParagraphTitle(props) {
+  return (
+    <Components.H3
+      {...props}
+      css={theme =>
+        css`
+          margin: ${theme.space[8]}px 0 ${theme.space[6]}px;
+          border-bottom: 1px solid ${theme.colors.gray[2]};
+        `
+      }
     />
   )
 }
@@ -56,27 +118,20 @@ export default function Layout({ children }) {
     <MDXProvider
       components={{
         ...Components,
-        h1: Components.H1,
-        h2: Components.H2,
-        h3: Components.H3,
+        h1: PageTitle,
+        h2: SectionTitle,
+        h3: ParagraphTitle,
         h4: Components.H4,
         h5: Components.H5,
         h6: Components.H6,
         p: Paragraph,
         code: Code,
         inlineCode: InlineCode,
+        a: Link,
       }}
     >
       <Components.ThemeProvider>
-        <Components.Box
-          as="main"
-          css={theme =>
-            css({
-              maxWidth: theme.sizes.content,
-              margin: '0 auto',
-            })
-          }
-        >
+        <Components.Box as="main">
           <Components.GlobalStyles />
           {children}
         </Components.Box>
