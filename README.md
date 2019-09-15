@@ -1,5 +1,7 @@
 # `@matthamlin/components`
 
+[![npm](https://flat.badgen.net/npm/v/@matthamlin/components)](https://www.npmjs.com/package/@matthamlin/components)
+
 A simple component library built on top of React, Emotion, and Styled-System.
 
 ### Available Components
